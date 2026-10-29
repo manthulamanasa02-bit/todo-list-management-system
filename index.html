@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+    <h1>To-Do List Management System</h1>
+    <p>Organize your daily tasks easily!</p>
+    </header>
+
+    <div class="filters">
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search tasks by name..."
+      aria-label="Search tasks by name"
+    />
+    <select id="priorityFilter" aria-label="Filter by priority">
+    <option value="All">All Priorities</option>
+    <option value="High">High Priority</option>
+    <option value="Medium">Medium Priority</option>
+    <option value="Low">Low Priority</option>
+</select>
+</div>
+
+
+    <form id="taskForm">
+      <input type="text" id="taskName" placeholder="Task name" required>
+      <input type="text" id="description" placeholder="Description">
+      <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <label for="dueDate">Due date</label>
+      <input type="date"id="dueDate" required>
+      <button type="submit" class="add-button">Add Task</button>
+    </form>
+
+    <div class="summary"id="taskSummary"></div>
+
+    <div id="taskList"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
